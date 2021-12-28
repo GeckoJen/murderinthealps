@@ -5,7 +5,7 @@ export const evidenceData = [
       "Murder victim: Alyssa; found murdered in sauna adjoining chalet.",
   },
   {
-    stage: 1,
+    stage: 2,
     evidence:
       "Potential suspects: Brendan, the victim's husband; Carolyn, the victim's best friend; Damien, Carolyn's husband; Edmund, Brendan's brother; Francesca, Edmund's wife.",
   },

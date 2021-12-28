@@ -79,3 +79,7 @@ Click on image for larger view and for interactive elements
 2. Create pages with basic text / images for puzzles
 3. For each page, create interactive elements to submit answers
 4. Test different parts work
+
+### Greta's case:
+3 equal rows, buttons on row 2
+11 columns,  10x1fr, 1x3fr

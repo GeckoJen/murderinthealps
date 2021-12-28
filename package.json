@@ -7,6 +7,7 @@
     "start": "node ./bin/www.js",
     "dbcreatetable": "node -r dotenv/config ./db/scripts/policefiles/createTable.js",
     "dbpopulatetable": "node -r dotenv/config ./db/scripts/policefiles/populateTable.js",
+    "dbdeletetabledata": "node -r dotenv/config ./db/scripts/policefiles/deleteTableData.js",
     "dev": "nodemon -r dotenv/config ./bin/www.js"
   },
   "dependencies": {

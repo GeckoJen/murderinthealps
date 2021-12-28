@@ -14,19 +14,24 @@
   </head>
 
   <body>
-    <h1>Puzzle 2</h1>
+    <h1>Summoned to a murder</h1>
     <h2></h2>
     <h3>
       First challenge: get up the mountain.<br /><br />You need to get up the
       mountain to the crime scene, but the cable car has been shut down for the
       night. You must figure out how to unlock the control booth and get it
-      going again.
+      going again. <br /><br />
+      Click on the image below to access the padlock.
     </h3>
     <div class="images">
-      <img class="puzzleImage" src="./images/cable car office.png" />
-      <p>Click on the image above to access the padlock</p>
+      <img class="puzzleImage" id="cablecar" src="./images/cable car office.png" />
+
+      <div class="policeFile">
+        <h4 class="evidenceTitle">Click to view evidence</h4>
+        <div class="evidenceTable"></div>
+      </div>
       <div class="padlock">
-          <button class="padlockButton close">X</button>
+        <button class="padlockButton close">X</button>
         <button class="padlockButton first">0</button>
         <button class="padlockButton second">0</button>
         <button class="padlockButton third">0</button>
@@ -34,6 +39,6 @@
         <button class="padlockButton unlock">unlock</button>
       </div>
     </div>
-    <script src="./js/puzzle1.js"></script>
+    <script src="./js/puzzle1.js" type="module"></script>
   </body>
 </html>
