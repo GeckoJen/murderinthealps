@@ -2,23 +2,21 @@ import {
   stages,
   rotateDigits,
   displayPoliceFile,
-  } from "./sharedFunctions.js";
+ 
+  makeLockBigger,
+  closeBiggerItem,
+  submitRightAnswer,
+} from "./sharedFunctions.js";
 
 const cableCarImage = document.querySelector("#cablecar");
 const padlock = document.querySelector(".padlock");
 const closeButton = document.querySelector(".close");
 
-cableCarImage.addEventListener("click", displayPadlock);
+cableCarImage.addEventListener("click", function(){makeLockBigger(padlock)});
 
-function displayPadlock() {
-  padlock.style.display = "grid";
-}
 
-closeButton.addEventListener("click", closePadlock);
+closeButton.addEventListener("click", function(){closeBiggerItem(padlock)});
 
-function closePadlock() {
-  padlock.style.display = "none";
-}
 
 const padlockButton1 = document.querySelector(".first");
 const padlockButton2 = document.querySelector(".second");
@@ -37,19 +35,7 @@ padlockButtons.forEach((button) => {
   button.addEventListener("click", rotateDigits);
 });
 
-padlockButtonUnlock.addEventListener("click", submitRightAnswer);
-
-function submitRightAnswer() {
-  const padlockCode = padlockButtons.map((button) => {
-    return button.innerText;
-  });
-  console.log(padlockCode);
-  const answer = "6369";
-  if (padlockCode.join("") === answer) {
-    console.log(true);
-    window.location.replace("../murderscene.html");
-  }
-}
+padlockButtonUnlock.addEventListener("click", function () { submitRightAnswer (padlockButtons, "6369", '../murderscene.html')});
 
 const policeFile = document.querySelector(".policeFile");
 const evidenceTitle = document.querySelector(".evidenceTitle");

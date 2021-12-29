@@ -10,6 +10,12 @@ export const stages = {
   "/summonedtomurder.html": 1,
   "/murderscene.html": 2,
   "/interviewingsuspects.html": 3,
+  "/interviewingbrendan.html": 4,
+  "/interviewingcarolyn.html": 5,
+  "/interviewingdamien.html": 6,
+  "/interviewingedmund.html": 7,
+  "/interviewingfrancesca.html": 8,
+  "/interviewinggreta.html": 9,
 };
 
 export async function displayPoliceFile(
@@ -45,3 +51,23 @@ function renderEvidence(element, evidenceTable) {
   evidenceTable.appendChild(newRow);
 }
 
+export function makePictureBigger(image) {
+  image.style.display = "block";
+}
+
+export function closeBiggerItem(item) {
+  item.style.display = "none";
+}
+
+export function makeLockBigger(lock) {
+  lock.style.display = "grid";
+}
+
+export function submitRightAnswer(array, answer, newUrl) {
+  const code = array.map((button) => {
+    return button.innerText;
+  });
+  if (code.join("") === answer) {
+       window.location.replace(newUrl);
+  }
+}

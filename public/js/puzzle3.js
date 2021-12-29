@@ -1,21 +1,21 @@
-import { stages, displayPoliceFile } from "./sharedFunctions.js";
+import {
+  stages,
+  displayPoliceFile,
+  makePictureBigger,
+  makeLockBigger,
+  closeBiggerItem,
+  submitRightAnswer,
+} from "./sharedFunctions.js";
 
 // click on picture of case to bring up clickable buttons, click to close
 const gretaCase = document.querySelector("#gretaCase");
 const gretaClickCase = document.querySelector(".gretaClickCase");
-const closeButton = document.querySelector(".caseClose")
+const closeButton = document.querySelector(".caseClose");
 
-gretaCase.addEventListener("click", displayGretaCase);
+gretaCase.addEventListener("click", function () { makeLockBigger(gretaClickCase) });
 
-function displayGretaCase() {
-    gretaClickCase.style.display = "grid";
-}
+closeButton.addEventListener("click", function(){closeBiggerItem(gretaClickCase)});
 
-closeButton.addEventListener("click", closeGretaCase);
-
-function closeGretaCase() {
-    gretaClickCase.style.display = "none";
-}
 
 //click buttons to rotate through letters
 
@@ -29,7 +29,9 @@ const seventh = document.querySelector(".caseSeventh");
 
 const buttons = [first, second, third, fourth, fifth, sixth, seventh];
 
-buttons.forEach(button => {button.addEventListener("click", rotateLetters)})
+buttons.forEach((button) => {
+  button.addEventListener("click", rotateLetters);
+});
 
 function rotateLetters(e) {
   let letters = [
@@ -46,12 +48,12 @@ function rotateLetters(e) {
     "U",
     "W",
     "Y",
-    ];
-    
+  ];
+
   let index = letters.findIndex((letter) => {
     return e.target.innerText === letter;
   });
-      if (index === letters.length - 1) {
+  if (index === letters.length - 1) {
     e.target.innerText = letters[0];
   } else {
     e.target.innerText = letters[index + 1];
@@ -60,37 +62,21 @@ function rotateLetters(e) {
 
 // if answer correct go to next page
 
-const caseUnlockButton = document.querySelector(".caseUnlock")
-    
-caseUnlockButton.addEventListener("click", submitRightAnswer);
+const caseUnlockButton = document.querySelector(".caseUnlock");
 
-function submitRightAnswer() {
-  const caseCode = buttons.map((button) => {
-    return button.innerText;
-  });
- 
-  const answer = "SNOWING";
-  if (caseCode.join("") === answer) {
-       window.location.replace("../gretasclue.html");
-  }
-}
+caseUnlockButton.addEventListener("click", function () { submitRightAnswer(buttons, "SNOWING", '../gretasclue.html') });
+
+
 
 //show/hide polaroids
 
 const gretaFolder = document.querySelector("#gretaFolder");
 const gretaPolaroids = document.querySelector("#gretaPolaroids");
 
-gretaFolder.addEventListener("click", showPolaroids);
+gretaFolder.addEventListener("click", function(){makePictureBigger(gretaPolaroids)});
 
-function showPolaroids() {
-    gretaPolaroids.style.display = "block";
-}
+gretaPolaroids.addEventListener("click", function(){closeBiggerItem(gretaPolaroids)});
 
-gretaPolaroids.addEventListener("click", hidePolaroids);
-
-function hidePolaroids() {
-    gretaPolaroids.style.display = "none";
-}
 
 // show/hide evidence file
 const policeFile = document.querySelector(".policeFile");

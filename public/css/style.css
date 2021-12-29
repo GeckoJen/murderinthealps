@@ -218,3 +218,131 @@ input {
 .caseUnlock {
   grid-area: 3 / 11 / span 1 / span 2;
 }
+
+/* Interviewing Brendan */
+
+.closeUp {
+  display: none;
+  width: 45%;
+  position: absolute;
+  top: 100px;
+  left: 20%;
+}
+
+#skiChaletGrid {
+  display: grid;
+  grid-template-rows: 2fr 3fr 2fr 3fr 4fr 7fr;
+  grid-template-columns: 11fr 7fr 2fr 6fr 4fr;
+  max-width: 70%;
+  max-height: 100vh;
+  margin: 2em auto;
+}
+
+#skiLockerCluePic {
+  grid-area: 1 /1 /-1/-1;
+  width: 100%;
+}
+
+#skiPictureDiv {
+  grid-area: 2 /2 /span 2/span 1;
+  }
+
+  #itineraryDiv {
+grid-area: 3 /4 / span 2 / span 1;
+  }
+
+  #skiLockerDiv {
+grid-area: 5 / 4 / span 1 / span 1;
+  }
+
+  .skiLockerCode {
+  background-image: linear-gradient(
+    45deg,
+    rgb(204, 192, 192),
+    rgb(223, 223, 223)
+  );
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr) 3fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10vw;
+  width: 80%;
+  height: 30vh;
+}
+
+.lockerClose {
+  grid-area: 1/1 / span 1 / span 1;
+}
+
+.lockerFirst {
+  grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.lockerSecond {
+  grid-area: 2 / 5 / span 1 / span 1;
+}
+
+.lockerThird {
+  grid-area: 2 / 6 / span 1 / span 1;
+}
+
+.lockerFourth {
+  grid-area: 2 / 7 / span 1 / span 1;
+}
+
+.lockerFifth {
+  grid-area: 2 / 8 / span 1 / span 1;
+}
+.lockerSixth {
+  grid-area: 2 / 9 / span 1 / span 1;
+}
+
+.lockerUnlock {
+  grid-area: 3 / 11 / span 1 / span 2;
+}
+
+/* Interviewing Carolyn */
+
+.secretDiaryCode {
+  background-image: url('../images/diarylock.png');
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* border: 2px solid black; */
+  display: grid;
+  grid-template-columns: 5fr repeat(7, 1fr) 4fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  grid-gap: 10px;
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 10vw;
+  width: 80%;
+  height: 40%;
+}
+
+.diaryClose {
+  grid-area: 2 / 8 / span 1 / span 1;
+}
+
+.diaryFirst {
+  grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.diarySecond {
+  grid-area: 2 / 5 / span 1 / span 1;
+}
+
+.diaryThird {
+  grid-area: 2 / 6 / span 1 / span 1;
+}
+
+.diaryUnlock {
+  border-radius: 50%;
+  grid-area: 2 / 2 / span 1 / span 1;
+}
