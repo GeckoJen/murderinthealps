@@ -2,7 +2,7 @@ import {
   stages,
   rotateDigits,
   displayPoliceFile,
-  makePictureBigger,
+  
   makeLockBigger,
   closeBiggerItem,
   submitRightAnswer,
@@ -39,7 +39,7 @@ diaryButtons.forEach((button) => {
 });
 
 diaryUnlock.addEventListener("click", function () {
-  submitRightAnswer(diaryButtons, "319", "../carolynsclue.html");
+  submitRightAnswer(diaryButtons, "319", "../insidethesecretdiary.html");
 });
 
 const policeFile = document.querySelector(".policeFile");

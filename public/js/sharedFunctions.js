@@ -15,7 +15,7 @@ export const stages = {
   "/interviewingdamien.html": 6,
   "/interviewingedmund.html": 7,
   "/interviewingfrancesca.html": 8,
-  "/interviewinggreta.html": 9,
+  "/francescasclue.html": 9,
 };
 
 export async function displayPoliceFile(
@@ -26,7 +26,7 @@ export async function displayPoliceFile(
   stages
 ) {
   if (evidenceTitle.innerText === "Click to view evidence") {
-    policeFile.style.minHeight = "50vh";
+    policeFile.style.minHeight = "100vh";
       policeFile.style.width = "100%";
       evidenceTitle.innerText = "Click to hide evidence";
     let stageNumber = stages[window.location.pathname];

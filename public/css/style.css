@@ -2,8 +2,7 @@
   --file-font: "Ubuntu Mono", monospace;
   --title-font: "Righteous", cursive;
   --general-font: "Yantramanav", sans-serif;
-  --code-font: Wingdings;
-}
+  }
 
 body {
   padding: 50px;
@@ -76,8 +75,11 @@ input {
 
 .evidenceTable {
   background-color: rgb(252, 235, 190);
-  margin-left: 1em;
-  margin-right: 1em;
+border: 10px solid rgb(172, 137, 41);
+}
+
+.evidenceTable p {
+  padding: 5px 10px;
 }
 
 /* Summoned to a murder page */
@@ -143,14 +145,24 @@ input {
   grid-area: 4 / 1 / span 1 / span 2;
 }
 
-#codedNote {
-  font-family: var(--code-font);
-}
 
 /* Murder Scene page */
 
 .shoeImages {
   display: flex;
+}
+
+#paper {
+  background-image: url('../images/scrumpled paper.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#codedNote {
+  padding: 3em;
+  font-size: 3em;
+
 }
 
 /* Interviewing suspects page  */
@@ -313,7 +325,6 @@ grid-area: 5 / 4 / span 1 / span 1;
   background-origin: content-box;
   background-repeat: no-repeat;
   background-size: contain;
-  /* border: 2px solid black; */
   display: grid;
   grid-template-columns: 5fr repeat(7, 1fr) 4fr;
   grid-template-rows: 2fr 1fr 2fr;
@@ -345,4 +356,287 @@ grid-area: 5 / 4 / span 1 / span 1;
 .diaryUnlock {
   border-radius: 50%;
   grid-area: 2 / 2 / span 1 / span 1;
+}
+
+/* Carolyn's clue */
+
+.biggerPuzzleImage {
+  max-width: 70%;
+  max-height: 100vh;
+  margin: 2em auto;
+}
+
+
+/* Damien's clue */
+
+.cctvGrid {
+  display: grid;
+  grid-template-columns: 9fr 3fr 6fr 8fr;
+  grid-template-rows: 6fr 3fr 2fr 4fr 9fr;
+  max-width: 60%;
+  max-height: 100vh;
+  margin: 2em auto;
+}
+
+.cctvImage {
+  grid-area: 1 /1 /span 5/span 4;
+  width: 100%;
+}
+
+.cctvCodeReminder {
+  grid-area: 3 / 1 / span 2 / span 1;
+}
+
+.cctvDoor {
+  grid-area: 2 / 3 / span 2 / span 1;
+}
+
+.cctvLock {
+  grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.CCTVpanel {
+  background-image: linear-gradient(
+    45deg,
+    rgb(204, 192, 192),
+    rgb(223, 223, 223)
+  );
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr repeat(7, 1fr) 4fr;
+  grid-gap: 10px;
+  display: none;
+  position: absolute;
+  top: 7vh;
+  right: 32vw;
+  max-width: 40%;
+  height: 80vh;
+}
+
+.cctvClose {
+grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.cctvFirst {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.cctvSecond {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.cctvThird {
+  grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.cctvFourth {
+  grid-area: 5 / 2 / span 1 / span 1;
+}
+
+.cctvFifth {
+  grid-area: 6 / 2 / span 1 / span 1;
+}
+
+.cctvY {
+  grid-area: 7 / 2 / span 1 / span 1;
+}
+
+.cctvSixth {
+  grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.cctvSeventh {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.cctvEighth {
+  grid-area: 4 / 3 / span 1 / span 1;
+}
+
+.cctvNinth {
+  grid-area: 5 / 3 / span 1 / span 1;
+}
+
+.cctvZero {
+  grid-area: 6 / 3 / span 1 / span 1;
+}
+
+.cctvC {
+  grid-area: 7 / 3 / span 1 / span 1;
+}
+
+.cctvUnlock {
+  border-radius: 50%;
+  grid-area: 9 / 2 / span 1 / span 2;
+}
+
+/* Interviewing Edmund */
+
+.laptopGrid {
+  display: grid;
+  grid-template-columns: 10fr 12fr 10fr;
+  grid-template-rows: 9fr 2fr 1fr 9fr;
+  max-width: 70%;
+  max-height: 100vh;
+  margin: 2em auto;
+align-items: center;
+justify-content: center;
+}
+
+.laptopImage {
+grid-area: 1 / 1 / span 4 /span 3;
+width: 100%;
+}
+
+#password {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#passwordInput {
+    font-family: var(--file-font);
+  padding: 0.4em;
+  border-radius: 10px;
+  margin: 0.2em;;
+  font-size: 1em;
+  width: 100%;
+}
+
+#selectPasswordHint {
+  grid-area: 3 / 2 / span 1 / span 1;
+  width: 100%;
+  height: 100%;
+}
+
+#passwordHint {
+  display: none;
+  grid-area: 3 /2 /span 1/span 1;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+#passwordHint p {
+  margin: 0;
+  padding: 0.2em;
+  font-size: 1em; 
+  color: black;
+  width: 100%;
+}
+
+/* Edmund's clue */
+
+#encryptionGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr 6fr 3fr 6fr 3fr 2fr;
+  grid-template-rows: 2fr 3fr 2fr 8fr;
+  width: 70%;
+  margin: 1em auto;
+}
+
+#laptopEncryption {
+  grid-area: 1 / 1 / -1 / -1;
+  width: 100%;
+}
+
+#encryptionAppButton {
+  grid-area: 1 / 1 /span 2 /span 2;
+  width: 100%;
+  height: 100%;
+}
+
+#encryptionApp {
+  display: none;
+  grid-area: 1 / 1 / -1 / -1;
+  width: 100%;
+}
+
+#inputMessage {
+  display: none;
+  grid-area: 2 / 2 / span 2 / span 5;
+  font-size: 1.5em;
+}
+
+#encryptButton {
+  display: none;
+  grid-area: 4 / 3 / span 1 / span 1;
+
+}
+
+#decryptButton {
+ display: none;
+  grid-area: 4 / 5 / span 1 / span 1;
+}
+
+#revealMessage {
+  display: none;
+  grid-area: 2 / 2 / span 2 / span 5;
+  background-color: rgb(175, 246, 255);
+  
+}
+
+#newMessage {
+font-family: var(--file-font);
+}
+
+/* In Alyssa's laptop */
+
+#decodedMessage {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+#finalSection {
+  display: none;
+
+}
+
+/* interviewing francesca  */
+/* 
+  <div class="emailGrid">
+        <img class="emailImage" src="./images/encryptedemail.png" />
+        <div id="clickOnZipFile"></div>
+        <div id="passwordForZipFile"><p>Enter password:</p>
+          <input id="zipFilePasswordInput" type="text" />
+        </div>
+      </div> */
+
+.emailGrid {
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  max-width: 50%;
+  max-height: 100vh;
+  margin: 2em auto;
+  
+}
+
+.emailImage {
+  grid-area: 1 / 1 / span 2 / span 1;
+  width: 100%;
+}
+
+#clickOnZipFile {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+#passwordForZipFile {
+  display: none;
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+#zipFilePasswordInput {
+  width: 60%;
+}
+
+/* Francesca's clue */
+
+#accusation {
+width: 50%;
+margin: 0.5em auto;
+}
+
+#submitAccusation {
+width: 20%;
+margin: 0.5em auto;
 }

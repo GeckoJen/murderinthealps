@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Murder in the Alps</title>
+
+    <html lang="en"></html>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu+Mono:ital@1&family=Yantramanav&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>Edmund's Clue</h1>
+
+    <h3>
+      Once in Alyssa's laptop, Edmund tells you that there's an encryption programme
+      he and Alyssa use. Just type in the message you want to encrypt and it'll encrypt it for you. Likewise, an already encrypted message can simply be entered in and it'll decrypt it for you.
+      Dead easy. Though somebody obviously had had access to her laptop at some point, as someone other than Edmund had figured out how to send an encrypted message to lure Alyssa to the sauna.
+    </h3>
+    <div class="puzzleImage" id="paper">
+        <p id="codedNote">
+          !k@mkv!zn @q g@cj 0vqpk6!3 @utqn .6p0qvw6 6mmu mu vq mp6 !vc!@ 6!
+          .uxol .g11mv
+        </p>
+      </div>
+      <div id="encryptionGrid">
+          <img  id="laptopEncryption" src="./images/laptop encryption.png">
+          <div id="encryptionAppButton"></div>
+          <img id="encryptionApp" src='./images/laptop encryption programme.png'>
+          <input id="inputMessage" type="text">
+          <div id="encryptButton"></div>
+          <div id="decryptButton"></div>
+          <div id="revealMessage"><p id='newMessage'></p><button id="closeMessage">Close</button></div>
+      </div>
+      <p>What was the decrypted message?</p>
+      <input id="decodedMessage" type="text">
+      <button id="submitAnswerButton">Submit</button>
+      <div id="finalSection"><h3>You confirm with Edmund that Neddy is his childhood nickname that nobody save Alyssa really used any more, but that everybody currently in the chalet would have known about it. You also verify from credit card/pay per view records that Francesca was indeed in her room watching movies that evening - she just purchased a new movie at exactly 10.05pm, placing her most definitely in her bedroom in the chalet.</h3>
+    <a href='./interviewingfrancesca.html'><button>Next suspect</button></a>
+    </div>
+  <script src="./js/puzzle8.js" type="module"></script>
+  </body>
+</html>
