@@ -6,6 +6,8 @@ export function rotateDigits(e) {
   }
 }
 
+export const url = "window.location.origin/api";
+
 export const stages = {
   "/summonedtomurder.html": 1,
   "/murderscene.html": 2,
@@ -19,16 +21,16 @@ export const stages = {
 };
 
 export async function displayPoliceFile(
-    policeFile,
-    evidenceTitle,
+  policeFile,
+  evidenceTitle,
   evidenceTable,
   url,
   stages
 ) {
   if (evidenceTitle.innerText === "Click to view evidence") {
     policeFile.style.minHeight = "100vh";
-      policeFile.style.width = "100%";
-      evidenceTitle.innerText = "Click to hide evidence";
+    policeFile.style.width = "100%";
+    evidenceTitle.innerText = "Click to hide evidence";
     let stageNumber = stages[window.location.pathname];
     const response = await fetch(`${url}/files/${stageNumber}`);
     const { payload } = await response.json();
@@ -37,8 +39,8 @@ export async function displayPoliceFile(
     });
   } else {
     policeFile.style.minHeight = "";
-      policeFile.style.width = "";
-      evidenceTitle.innerText = "Click to view evidence";
+    policeFile.style.width = "";
+    evidenceTitle.innerText = "Click to view evidence";
     while (evidenceTable.firstChild) {
       evidenceTable.removeChild(evidenceTable.firstChild);
     }
@@ -68,6 +70,6 @@ export function submitRightAnswer(array, answer, newUrl) {
     return button.innerText;
   });
   if (code.join("") === answer) {
-       window.location.replace(newUrl);
+    window.location.replace(newUrl);
   }
 }

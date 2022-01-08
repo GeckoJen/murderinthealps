@@ -2,10 +2,10 @@ import {
   stages,
   rotateDigits,
   displayPoliceFile,
-  
   makeLockBigger,
   closeBiggerItem,
   submitRightAnswer,
+  url,
 } from "./sharedFunctions.js";
 
 const secretDiary = document.querySelector(".puzzleImage");
@@ -44,7 +44,7 @@ diaryUnlock.addEventListener("click", function () {
 
 const policeFile = document.querySelector(".policeFile");
 const evidenceTitle = document.querySelector(".evidenceTitle");
-const url = "";
+
 const evidenceTable = document.querySelector(".evidenceTable");
 
 policeFile.addEventListener("click", function () {

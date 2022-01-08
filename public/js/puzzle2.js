@@ -1,4 +1,4 @@
-import { stages, displayPoliceFile } from "./sharedFunctions.js";
+import { stages, displayPoliceFile, url } from "./sharedFunctions.js";
 
 const answerText = document.querySelector(".answer");
 const submitButton = document.querySelector("button");
@@ -15,7 +15,7 @@ function verifyAnswer() {
 
 const policeFile = document.querySelector(".policeFile");
 const evidenceTitle = document.querySelector(".evidenceTitle");
-const url = "";
+
 const evidenceTable = document.querySelector(".evidenceTable");
 
 policeFile.addEventListener("click", function () {

@@ -5,6 +5,7 @@ import {
   makeLockBigger,
   closeBiggerItem,
   submitRightAnswer,
+  url,
 } from "./sharedFunctions.js";
 
 // click on picture of case to bring up clickable buttons, click to close
@@ -81,7 +82,7 @@ gretaPolaroids.addEventListener("click", function(){closeBiggerItem(gretaPolaroi
 // show/hide evidence file
 const policeFile = document.querySelector(".policeFile");
 const evidenceTitle = document.querySelector(".evidenceTitle");
-const url = "";
+
 const evidenceTable = document.querySelector(".evidenceTable");
 
 policeFile.addEventListener("click", function () {

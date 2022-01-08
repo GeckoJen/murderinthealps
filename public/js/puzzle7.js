@@ -1,9 +1,8 @@
 import {
   stages,
-  
   displayPoliceFile,
   makePictureBigger,
-
+  url
 } from "./sharedFunctions.js";
 
 
@@ -27,7 +26,7 @@ function checkPassword(answer, newUrl) {
 
 const policeFile = document.querySelector(".policeFile");
 const evidenceTitle = document.querySelector(".evidenceTitle");
-const url = "";
+
 const evidenceTable = document.querySelector(".evidenceTable");
 
 policeFile.addEventListener("click", function () {

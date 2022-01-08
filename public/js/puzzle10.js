@@ -1,11 +1,7 @@
 import {
   stages,
-  rotateDigits,
-  displayPoliceFile,
-  makePictureBigger,
-  makeLockBigger,
-  closeBiggerItem,
-  submitRightAnswer,
+   displayPoliceFile,
+url
 } from "./sharedFunctions.js";
 
 {/* <input id="accusation" type="text" />
@@ -28,7 +24,7 @@ function checkAnswer(answer, newUrl) {
 
 const policeFile = document.querySelector(".policeFile");
 const evidenceTitle = document.querySelector(".evidenceTitle");
-const url = "";
+
 const evidenceTable = document.querySelector(".evidenceTable");
 
 policeFile.addEventListener("click", function () {

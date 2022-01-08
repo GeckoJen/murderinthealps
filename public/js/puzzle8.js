@@ -1,6 +1,7 @@
 import {
   makePictureBigger,
   closeBiggerItem,
+  
 } from "./sharedFunctions.js";
 
 const encryptionAppButton = document.querySelector("#encryptionAppButton");
