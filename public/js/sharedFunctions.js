@@ -6,7 +6,7 @@ export function rotateDigits(e) {
   }
 }
 
-export const url = "window.location.origin";
+export const url = "https://escape-room-murder-in-the-alps.herokuapp.com";
 
 export const stages = {
   "/summonedtomurder.html": 1,
