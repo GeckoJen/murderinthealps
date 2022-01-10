@@ -6,7 +6,7 @@ export function rotateDigits(e) {
   }
 }
 
-export const url = "window.location.origin/api";
+export const url = "window.location.origin";
 
 export const stages = {
   "/summonedtomurder.html": 1,
